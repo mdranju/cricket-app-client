@@ -69,11 +69,7 @@ export default function Navbar() {
                 <NavigationMenuList className="flex-col items-start gap-0 md:gap-2">
                   {navigationLinks.map((link, index) => (
                     <NavigationMenuItem key={index} className="w-full">
-                      <NavigationMenuLink
-                        href={link.to}
-                        className="py-1.5"
-                        active={link.active}
-                      >
+                      <NavigationMenuLink href={link.to} className="py-1.5">
                         {link.label}
                       </NavigationMenuLink>
                     </NavigationMenuItem>
@@ -84,7 +80,7 @@ export default function Navbar() {
           </Popover>
           {/* Main nav */}
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-primary hover:text-primary/90">
+            <Link to="/" className="text-primary hover:text-primary/90">
               <Logo />
             </Link>
             {/* Navigation menu */}
